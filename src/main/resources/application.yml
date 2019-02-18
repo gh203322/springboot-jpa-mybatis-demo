@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLInnoDBDialect
+      new_generator_mappings: false
+      format_sql: true
+      ddl_auto: update
+      show_sql: true
+mybatis:
+  # ÷ÿ“™≈‰÷√
+  type-aliases-package: com.demo.all.model.mybatis
+  mapper-locations: classpath:mapper/*.xml
+  callSettersOnNulls:  true
